@@ -17,4 +17,3 @@ A fullstack web application for tracking personal learning goals, courses, tutor
 - **Backend**: Python Django with Django REST Framework
 - **Database**: SQLite
 - **Charts**: Recharts for data visualization
-- **Icons**: Lucide React
