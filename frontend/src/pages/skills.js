@@ -31,11 +31,14 @@ const Skills = () => {
 
   const handleAddSkill = async (skillData) => {
     try {
+      console.log('Adding skill with data:', skillData);
       const newSkill = await createSkill(skillData);
+      console.log('Skill created successfully:', newSkill);
       setSkills([...skills, newSkill]);
       setShowAddSkillModal(false);
     } catch (error) {
       console.error('Error adding skill:', error);
+      alert('Failed to add skill. Please check the console for details.');
     }
   };
 

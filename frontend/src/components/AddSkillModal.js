@@ -37,7 +37,13 @@ const AddSkillModal = ({ onClose, onAdd }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name.trim()) {
-      onAdd(formData);
+      // Convert string values to appropriate types
+      const skillData = {
+        ...formData,
+        difficulty: parseInt(formData.difficulty),
+        hours_spent: parseFloat(formData.hours_spent) || 0
+      };
+      onAdd(skillData);
     }
   };
 

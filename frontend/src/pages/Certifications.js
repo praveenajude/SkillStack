@@ -27,11 +27,14 @@ const Certifications = () => {
 
   const handleAddCertification = async (certData) => {
     try {
+      console.log('Adding certification with data:', certData);
       const newCert = await createCertification(certData);
+      console.log('Certification created successfully:', newCert);
       setCertifications([...certifications, newCert]);
       setShowAddCertificationModal(false);
     } catch (error) {
       console.error('Error adding certification:', error);
+      alert('Failed to add certification. Please check the console for details.');
     }
   };
 

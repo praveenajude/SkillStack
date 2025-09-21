@@ -8,5 +8,5 @@ router.register(r'resources', ResourceViewSet)
 router.register(r'certifications', CertificationViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]

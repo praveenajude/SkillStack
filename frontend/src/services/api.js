@@ -21,8 +21,15 @@ export const getSkill = async (id) => {
 };
 
 export const createSkill = async (skillData) => {
-  const response = await api.post('/skills/', skillData);
-  return response.data;
+  try {
+    console.log('Sending skill data to API:', skillData);
+    const response = await api.post('/skills/', skillData);
+    console.log('API response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('API error creating skill:', error.response?.data || error.message);
+    throw error;
+  }
 };
 
 export const updateSkill = async (id, skillData) => {
@@ -78,8 +85,15 @@ export const getCertification = async (id) => {
 };
 
 export const createCertification = async (certificationData) => {
-  const response = await api.post('/certifications/', certificationData);
-  return response.data;
+  try {
+    console.log('Sending certification data to API:', certificationData);
+    const response = await api.post('/certifications/', certificationData);
+    console.log('API response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('API error creating certification:', error.response?.data || error.message);
+    throw error;
+  }
 };
 
 export const updateCertification = async (id, certificationData) => {
