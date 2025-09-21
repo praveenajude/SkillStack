@@ -92,7 +92,7 @@ class Resource(models.Model):
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE, related_name='resources')
     title = models.CharField(max_length=300)
     resource_type = models.CharField(max_length=20, choices=RESOURCE_TYPES)
-    platform = models.CharField(max_length=20, choices=PLATFORMS)
+    platform = models.CharField(max_length=20, choices=PLATFORMS, default='other')
     link = models.URLField(blank=True, null=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='not_started')
     hours_spent = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
