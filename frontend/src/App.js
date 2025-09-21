@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
-import Skills from './pages/Skills';
+import Skills from './pages/skills';
 import Certifications from './pages/Certifications';
 import './App.css';
 

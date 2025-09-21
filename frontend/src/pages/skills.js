@@ -3,7 +3,7 @@ import { Search, Filter, Trash2, BookOpen, CheckCircle, Calendar, Plus, External
 import { getAllSkills, createSkill, deleteSkill, addResourceToSkill, updateResource, deleteResource } from '../services/api';
 import AddSkillModal from '../components/AddSkillModal';
 import AddResourceModal from '../components/AddResourceModal';
-import './Skills.css';
+import './skills.css';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
