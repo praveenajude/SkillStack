@@ -33,10 +33,10 @@ const Dashboard = () => {
     }
   };
 
-  // Use real skill progress data from API with actual skill colors
+
   const skillProgressData = (stats.skill_progress || []).map(skill => ({
     ...skill,
-    fill: skill.color || '#8B5CF6' // Use skill's chosen color or default purple
+    fill: skill.color || '#8B5CF6' 
   }));
 
   const completionData = [
@@ -52,7 +52,6 @@ const Dashboard = () => {
     );
   }
 
-  // Show empty state if no skills have been added
   if (stats.total_skills === 0) {
     return (
       <div className="dashboard">
