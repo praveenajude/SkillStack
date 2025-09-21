@@ -31,7 +31,7 @@
   padding: 16px 20px 20px 20px;
   display: flex;
   justify-content: flex-start;
-  background: #3b122b;
+  background: #43123F;
 }
 
 .header-bottom .header-content {
@@ -100,7 +100,7 @@
 }
 
 .nav-link.active {
-  color: white;
+  color: #C4C600;
   background: #60043bd9;
   border-bottom: 2px solid #9c0e63;
 }
